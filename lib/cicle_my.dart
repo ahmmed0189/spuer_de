@@ -8,7 +8,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int counter = 0;
 
   @override
   void initState() {
@@ -21,9 +21,9 @@ class MyHomePageState extends State<MyHomePage> {
     super.dispose();
   }
 
-  void _incrementCounter() {
+  void incrementCounter() {
     setState(() {
-      _counter += 2;
+      counter += 2;
     });
   }
 
@@ -40,11 +40,11 @@ class MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              '$_counter',
+              '$counter',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             OutlinedButton(
-              onPressed: _incrementCounter,
+              onPressed: incrementCounter,
               child: const Text('Increment by 2'),
             ),
           ],
